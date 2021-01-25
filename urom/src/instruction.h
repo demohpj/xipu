@@ -23,7 +23,7 @@ class Instruction
 		//! Definitions of the instruction argument types
 		enum class Arg
 		{
-			None, //!< Not argument
+			None, //!< No argument
 			ABXY, //!< Main and auxiliary registers
 			AB, //!< Only main registers
 			Val256, //!< 8 bit unsigned value
