@@ -11,7 +11,7 @@
 
 #include "uromdata.h"
 
-//! Default constructor for creating an empty uRom opcode table
+//! Default constructor for creating an empty uROM opcode table
 URomData::URomData()
 {
 	this->data[0].fill(0);

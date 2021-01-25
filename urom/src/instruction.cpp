@@ -27,7 +27,7 @@ Instruction::Instruction()
 /**
  * Constructor using for create an instruction with a defined opcode
  *
- * @param opCode Opcode number
+ * @param opcode Opcode number
  * @param arg0 First argument type
  * @param arg1 Second argument type
  * @param arg2 Third argument type
