@@ -12,7 +12,6 @@ OUTPUT_DIRECTORY       =
 CREATE_SUBDIRS         = NO
 ALLOW_UNICODE_NAMES    = NO
 OUTPUT_LANGUAGE        = English
-OUTPUT_TEXT_DIRECTION  = None
 BRIEF_MEMBER_DESC      = YES
 REPEAT_BRIEF           = YES
 ABBREVIATE_BRIEF       =
@@ -112,7 +111,7 @@ FILE_PATTERNS          = *.h \
 RECURSIVE              = NO
 EXCLUDE                =
 EXCLUDE_SYMLINKS       = NO
-EXCLUDE_PATTERNS       =
+EXCLUDE_PATTERNS       = moc_*.cpp
 EXCLUDE_SYMBOLS        =
 EXAMPLE_PATH           =
 EXAMPLE_PATTERNS       =
@@ -139,7 +138,6 @@ VERBATIM_HEADERS       = YES
 # Configuration options related to the alphabetical class index
 #---------------------------------------------------------------------------
 ALPHABETICAL_INDEX     = YES
-COLS_IN_ALPHA_INDEX    = 5
 IGNORE_PREFIX          =
 #---------------------------------------------------------------------------
 # Configuration options related to the HTML output
@@ -219,7 +217,6 @@ PDF_HYPERLINKS         = YES
 USE_PDFLATEX           = YES
 LATEX_BATCHMODE        = NO
 LATEX_HIDE_INDICES     = NO
-LATEX_SOURCE_CODE      = NO
 LATEX_BIB_STYLE        = plain
 LATEX_TIMESTAMP        = NO
 LATEX_EMOJI_DIRECTORY  =
@@ -232,7 +229,6 @@ COMPACT_RTF            = NO
 RTF_HYPERLINKS         = NO
 RTF_STYLESHEET_FILE    =
 RTF_EXTENSIONS_FILE    =
-RTF_SOURCE_CODE        = NO
 #---------------------------------------------------------------------------
 # Configuration options related to the man page output
 #---------------------------------------------------------------------------
@@ -253,7 +249,6 @@ XML_NS_MEMB_FILE_SCOPE = NO
 #---------------------------------------------------------------------------
 GENERATE_DOCBOOK       = NO
 DOCBOOK_OUTPUT         = docbook
-DOCBOOK_PROGRAMLISTING = NO
 #---------------------------------------------------------------------------
 # Configuration options for the AutoGen Definitions output
 #---------------------------------------------------------------------------

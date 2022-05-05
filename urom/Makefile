@@ -1,10 +1,30 @@
-UROM = ../bin/tools/urom.exe
-BIN_0 = urom0.bin
-BIN_1 = urom1.bin
+QMAKE ?= qmake
 
-all: clean
-	$(UROM)
+QT_PRO = urom.pro
+
+.PHONY: all
+all: src doc
+
+.PHONY: src
+src: qmake
+	$(MAKE) -C src
+
+.PHONY: doc
+doc:
+	$(MAKE) -C doc
+
+.PHONY: qmake
+qmake:
+	cd src; \
+	$(QMAKE) $(QT_PRO)
+
+.PHONY: clean
+clean: clean_src clean_doc
 	
-clean:
-	rm -f $(BIN_0)
-	rm -f $(BIN_1)
+.PHONY: clean_src
+clean_src: qmake
+	$(MAKE) -C src clean
+
+.PHONY: clean_doc
+clean_doc:
+	$(MAKE) -C doc clean
