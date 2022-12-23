@@ -75,10 +75,10 @@ The project supports building process on Windows and Linux.
 
 - Geany - Multi-language IDE. Used to create Makefile, assembler code etc.
 - QtCreator - IDE for C++/Qt. Used to create desktop applications.
-- Qt 5.12.8 - Multiplatform Qt 5 library. It supports UI, data structures, files etc.
+- Qt 5.12.4 - Multiplatform Qt 5 library. It supports UI, data structures, files etc.
 - GCC - C and C++ code compiler.
 - Make - Build automation tool.
-- Doxygen 1.9.2 - Documentation generator from annotated sources.
+- Doxygen 1.9.5 - Documentation generator from annotated sources.
 - Proteus 8 - Circuit simulator software. Used to simulate the XiPU.
 - QCAD - DXF files editor. Used to create Plexiglas case for the XiPC.
 
@@ -86,11 +86,13 @@ The project supports building process on Windows and Linux.
 
 ```console
 .
+├── asm            # Assembler Compiler for the XiPU.
 ├── case           # A simple Plexiglas case project for the XiPC.
 ├── ide
 │   ├── geany      # IDE configuration to support assembler for the XiPU.
 │   └── qtcreator  # IDE configuration for code rules.
 ├── lib            # Binary libraries needed to run compiled applications on Windows.
+├── rom            # OS with a simple terminal and IO API for applications.
 ├── sim            # Simulation project of the XiPU.
 └── urom
     ├── doc        # Documentation of the uROM generator to make by Doxygen.
@@ -120,9 +122,44 @@ Or on Linux:
 ./urom
 ```
 
+### ROM
 
+To build the OS ROM image file, the map file with API handlers, and create documentation, please type:
 
+```console
+cd rom
+make
+```
 
+### ASM
 
+To build the application and create documentation, please type:
 
+```console
+cd asm
+make
+```
 
+To compile ROM, please type on Windows:
+
+```console
+./asm.exe rom [input_file] [output_bin] [output_map]
+```
+
+Or on Linux:
+
+```console
+./asm rom [input_file] [output_bin] [output_map]
+```
+
+To compile an application, please type on Windows:
+
+```console
+./asm.exe app [input_file] [output_bin]
+```
+
+Or on Linux:
+
+```console
+./asm app [input_file] [output_bin]
+```
