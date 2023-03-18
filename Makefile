@@ -12,5 +12,4 @@ bin:
 .PHONY: clean
 clean:
 	$(MAKE) -C doc clean
-	$(MAKE) -C fs clean
 	$(MAKE) -C bin clean
