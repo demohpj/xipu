@@ -52,7 +52,7 @@ rom: tools
 	cp $(ROM_DIR)/$(ROM_BIN) rom
 	cp $(ROM_DIR)/$(ROM_MAP) rom
 
-fs: tools
+fs: tools rom
 	rm -rf fs
 	$(MAKE) -C $(FS_DIR)
 	mkdir -p fs
