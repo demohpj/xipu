@@ -99,6 +99,7 @@ The project supports building process on Windows and Linux.
 ├── emu
 │   ├── doc        # Documentation of the XiPC Emulator to make by Doxygen.
 │   └── src        # Source code of the XiPC Emulator.
+├── fonts          # Fonts used in desktop GUI applications.
 ├── fs             # File system generator needed by the real XiPC and the XiPC Emulator.
 ├── ide
 │   ├── geany      # IDE configuration to support assembler for the XiPU.
