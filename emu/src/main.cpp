@@ -10,6 +10,7 @@
  */
 
 #include <QApplication>
+#include <QFontDatabase>
 
 #include "emu.h"
 
@@ -22,6 +23,8 @@
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
+
+	QFontDatabase::addApplicationFont("fonts/DejaVuSansMono-Bold.ttf");
 
 	QFont font = a.font();
 
