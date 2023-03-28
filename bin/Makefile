@@ -1,6 +1,7 @@
 UROM_DIR = ../urom
 ASM_DIR = ../asm
 EMU_DIR = ../emu
+FONTS_DIR = ../fonts
 
 ifeq ($(OS),Windows_NT)
 	UROM_EXE = urom.exe
@@ -71,6 +72,8 @@ tools: tools_urom tools_asm tools_emu
 	cp $(UROM_DIR)/src/$(UROM_EXE) tools
 	cp $(ASM_DIR)/src/$(ASM_EXE) tools
 	cp $(EMU_DIR)/src/$(EMU_EXE) tools
+	
+	cp -r $(FONTS_DIR) tools
 	
 ifeq ($(OS),Windows_NT)
 	cp -r $(LIB_DIR)/* tools
