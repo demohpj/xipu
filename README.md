@@ -81,6 +81,7 @@ The project supports building process on Windows and Linux.
 - Doxygen 1.9.6 - Documentation generator from annotated sources.
 - Proteus 8 - Circuit simulator software. Used to simulate the XiPU.
 - QCAD - DXF files editor. Used to create Plexiglas case for the XiPC.
+- DipTrace 4.2.0.1 - Schematic and PCB design software.
 
 ### 3.2. Project structure
 
@@ -104,7 +105,11 @@ The project supports building process on Windows and Linux.
 ├── ide
 │   ├── geany      # IDE configuration to support assembler for the XiPU.
 │   └── qtcreator  # IDE configuration for code rules.
+├── io
+│   └── pcb        # PCB design for the IO Board
+├── keyboard       # PCB design for the keyboard
 ├── lib            # Binary libraries needed to run compiled applications on Windows x64.
+├── pcb            # PCB design for the XiPU
 ├── rom            # OS with a simple terminal and IO API for applications.
 ├── sim            # Simulation project of the XiPU.
 └── urom
