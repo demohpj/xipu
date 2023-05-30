@@ -105,9 +105,8 @@ The project supports building process on Windows and Linux.
 ├── ide
 │   ├── geany      # IDE configuration to support assembler for the XiPU.
 │   └── qtcreator  # IDE configuration for code rules.
-├── io
-│   └── pcb        # PCB design for the IO Board
-├── keyboard       # PCB design for the keyboard
+├── io             # PCB design for the IO Board
+├── kbd            # PCB design for the keyboard
 ├── lib            # Binary libraries needed to run compiled applications on Windows x64.
 ├── pcb            # PCB design for the XiPU
 ├── rom            # OS with a simple terminal and IO API for applications.
