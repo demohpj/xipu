@@ -104,7 +104,7 @@ The project supports building process on Windows and Linux.
 ├── fonts          # Fonts used in desktop GUI applications.
 ├── fs             # File system generator needed by the real XiPC and the XiPC Emulator.
 ├── fw
-│   ├── doc        # Documentation of the IO Board to make by Doxygen.
+│   ├── doc        # Documentation of the IO Board firmware to make by Doxygen.
 │   └── src        # Source code of the firmware for the IO Board.
 ├── ide
 │   ├── geany      # IDE configuration to support assembler for the XiPU.
