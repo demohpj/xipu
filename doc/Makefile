@@ -1,10 +1,10 @@
 UROM_DOC_DIR = ../urom/doc
 ASM_DOC_DIR = ../asm/doc
 EMU_DOC_DIR = ../emu/doc
-IO_DOC_DIR = ../io/firmware/doc
+FW_DOC_DIR = ../fw/doc
 
 .PHONY: all
-all: urom asm emu io
+all: urom asm emu fw
 
 .PHONY: urom
 urom:
@@ -24,20 +24,20 @@ emu:
 	$(MAKE) -C $(EMU_DOC_DIR)
 	cp -R $(EMU_DOC_DIR)/html emu
 
-.PHONY: io
-io:
-	#rm -rf io
-	#$(MAKE) -C $(IO_DOC_DIR)
-	#cp -R $(IO_DOC_DIR)/html io
+.PHONY: fw
+fw:
+	rm -rf fw
+	$(MAKE) -C $(FW_DOC_DIR)
+	cp -R $(FW_DOC_DIR)/html fw
 
 .PHONY: clean
 clean:
 	$(MAKE) -C $(UROM_DOC_DIR) clean
 	$(MAKE) -C $(ASM_DOC_DIR) clean
 	$(MAKE) -C $(EMU_DOC_DIR) clean
-	#$(MAKE) -C $(IO_DOC_DIR) clean
+	$(MAKE) -C $(FW_DOC_DIR) clean
 	
 	rm -rf urom
 	rm -rf asm
 	rm -rf emu
-	rm -rf io
+	rm -rf fw

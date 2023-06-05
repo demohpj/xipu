@@ -23,11 +23,11 @@ FS_DIR = ../fs
 FS_APP = app
 FS_FILE = file
 
-#IO_SRC_DIR = ../io/firmware/src
-#IO_HEX = io.hex
+FW_DIR = ../fw
+FW_HEX = Objects/io.hex
 
 .PHONY: all
-all: urom rom fs io
+all: urom rom fs fw
 
 urom: tools
 	rm -rf urom
@@ -60,11 +60,11 @@ fs: tools rom
 	cp -r $(FS_DIR)/$(FS_APP) fs
 	cp -r $(FS_DIR)/$(FS_FILE) fs
 
-io:
-	#rm -rf io
-	#$(MAKE) -C $(IO_SRC_DIR)
-	#mkdir -p io
-	#cp $(IO_SRC)/$(IO_HEX) $(IO_DST)/
+fw:
+	rm -rf fw
+	$(MAKE) -C $(FW_DIR)
+	mkdir -p fw
+	cp -f $(FW_DIR)/src/$(FW_HEX) fw | true
 
 tools: tools_urom tools_asm tools_emu
 	rm -rf tools
@@ -98,9 +98,10 @@ clean:
 	$(MAKE) -C $(ASM_DIR) clean
 	$(MAKE) -C $(EMU_DIR) clean
 	$(MAKE) -C $(FS_DIR) clean
+	$(MAKE) -C $(FW_DIR) clean
 	
 	rm -rf tools
 	rm -rf urom
 	rm -rf rom
 	rm -rf fs
-	rm -rf io
+	rm -rf fw
