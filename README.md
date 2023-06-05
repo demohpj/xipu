@@ -77,6 +77,7 @@ The project supports building process on Windows and Linux.
 - QtCreator - IDE for C++/Qt. Used to create desktop applications.
 - Qt 5.12.4 - Multiplatform Qt 5 library. It supports UI, data structures, files etc.
 - GCC - C and C++ code compiler.
+- Keil uVision 5.37 - Compiler and debugger for the STM32F0 MCU.
 - Make - Build automation tool.
 - Doxygen 1.9.6 - Documentation generator from annotated sources.
 - Proteus 8 - Circuit simulator software. Used to simulate the XiPU.
@@ -156,7 +157,17 @@ cd rom
 make
 ```
 
-#### 4.2.4. Applications
+#### 4.2.4. IO Board firmware
+
+To build the IO Board firmware file, and create documentation, please type:
+
+```console
+cd fw
+make
+```
+To build successfully a firmware is needed the Keil uVision5 with a free license for STM32F0 MCUs. UV4.exe must be added to the PATH env.
+
+#### 4.2.5. Applications
 
 To build the user applications, please type:
 
@@ -165,7 +176,7 @@ cd app
 make
 ```
 
-#### 4.2.5. File System
+#### 4.2.6. File System
 
 To generate a directory with the virtual file system, please type:
 
@@ -174,7 +185,7 @@ cd fs
 make
 ```
 
-#### 4.2.6. XiPC Emulator
+#### 4.2.7. XiPC Emulator
 
 To build the application and create documentation, please type:
 
