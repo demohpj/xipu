@@ -62,7 +62,7 @@ fs: tools rom
 
 fw:
 	rm -rf fw
-	$(MAKE) -C $(FW_DIR)
+	$(MAKE) -C $(FW_DIR) src
 	mkdir -p fw
 	cp -f $(FW_DIR)/src/$(FW_HEX) fw | true
 
