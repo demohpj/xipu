@@ -77,6 +77,30 @@ external .xStringGetCursorX:
 	ldr *xStringCursorX, A
 	ret
 
+; Arguments:
+; 	A - row
+; No return
+external .xStringSetCursorY:
+	push X
+	push Y
+	; Write new row position to set
+	mov A, Y
+	; Read current column position to set
+	ldr *xStringCursorX, X
+	; Set new row position and leave column position
+	call .xStringSetCursor
+	pop Y
+	pop X
+	ret
+
+; No arguments
+; Return:
+;	A - row
+external .xStringGetCursorY:
+	; Get current row position
+	ldr *xStringCursorY, A
+	ret
+
 ; No arguments
 ; No return
 external .xStringNewLine:

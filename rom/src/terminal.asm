@@ -125,9 +125,14 @@ const messageFreeRam "28K Data memory free"
 .xTerminalGetCommand:
 	; Reset color
 	call .xTerminalColorReset
+	; Do not make a new line if the cursor is at beginning
+	call .xStringGetCursorY
+	cmp 0, A
+	je .xTerminalGetCommand_no_newLine
+	call .xStringNewLine
+	call .xStringNewLine
+.xTerminalGetCommand_no_newLine:
 	; Show command line
-	call .xStringNewLine
-	call .xStringNewLine
 	mov '>', A
 	call .xStringPrintChar
 	call .xLcdRefresh
